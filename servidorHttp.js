@@ -107,9 +107,9 @@ var onRequest = (req, res) => {
     })
     res.writeHead(
         200, 
-        {'Content-Type':'text/html', 'Otro':'uno mas'}
+        {'Content-Type':'aplication/json', 'Otro':'uno mas'}
     )
-    res.write(obj2)
+    res.write(obj)
     res.end()
 }
 var server = http.createServer(onRequest)
