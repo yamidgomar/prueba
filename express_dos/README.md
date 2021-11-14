@@ -49,9 +49,10 @@ para hacer que la app cresca... ¿si mañana tengo otro componente como importo 
 
 tendremos toda la informacion del router en un solo archivo.
 
-//nuevo archivo : network/routes.js
 
 ```javascript
+//nuevo archivo : network/routes.js
+
 const express = require('express')
 const message = require('../conponents/messsge/network')
 
