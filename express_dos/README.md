@@ -44,15 +44,14 @@ router.post('/message', (req, res) => {
 module.exports = router
 
 ```
-------------------------
 
 para hacer que la app cresca... ¿si mañana tengo otro componente como importo dos veces el router?
 
 tendremos toda la informacion del router en un solo archivo.
 
-```
 //nuevo archivo : network/routes.js
 
+```javascript
 const express = require('express')
 const message = require('../conponents/messsge/network')
 
@@ -62,7 +61,7 @@ const routes = (server) => {
 
 module.exports = routes
 
-// server.js
+   // server.js
 
 const express = require('express')
 //const router = require('./conponents/messsge/network')
@@ -80,6 +79,7 @@ router(app)
 app.listen(3000)
 console.log('servidor corriendo en puerto 3000')
 ```
+
 ## Controladores:Definiendo la logica de negocio:
 
 Ya tenemos la capa de red separada, debemos hacer la parte logica o controlador.
@@ -126,7 +126,10 @@ router.post('/', (req, res) => {
 })
 
 module.exports = router
+
+
 ```
+   ```
 --------------------------
 
 ¿que pasa cuando viene el usuario?
