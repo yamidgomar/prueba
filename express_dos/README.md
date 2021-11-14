@@ -20,7 +20,7 @@ app.use(router)
 app.listen(3000)
 console.log('servidor corriendo en puerto 3000')
 
-    component/message/network
+    //component/message/network
 
 const express = require('express')
 const router = express.Router()
