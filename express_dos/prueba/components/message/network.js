@@ -19,6 +19,9 @@ router.post('/', (req,res) => {
         .then(() => {
             response.sucess(req,res,'hola desde post', 201)
         })
+        .catch(e => {
+            response.error(req,res, 'Error ocasionado', e)
+        })
         
 })
 
