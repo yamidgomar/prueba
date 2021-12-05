@@ -1,28 +1,24 @@
 const express = require('express')
-const app = express()
 const bodyParser = require('body-parser')
 const router = express.Router()
-const response = require('./network/response')
+const app = express()
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:false}))
 app.use(router)
 
 router.get('/message', (req, res) => {
     console.log(req.headers)
     res.header({
-        "Mi_nuevo":"_Header",
-        "Otro": "_Header"
+        "header_nuevo":"nuevo header"
     })
-    response.sucess(req,res,'<h1>Lista de mensajes</h1>', 200)
+    res.send('hola')
 })
 
-router.post('/message', (req, res) => {
+router.post('/message', (req, res) =>{
     console.log(req.body)
     console.log(req.query)
-    response.sucess(req,res,'<h1>Mensaje guardado con exito.</h1>', 201)
+    res.send('hola desde post')
 })
-
-app.listen(3000)
-
-console.log('servidor corriendo en puerto 3000')
+app.listen(3000, () => {
+    console.log('Servidor corriendo en puerto 3000')
+})
