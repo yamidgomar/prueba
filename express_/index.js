@@ -39,15 +39,15 @@ console.log('Servidor funcionando en puerto 3000')
 
 const express = require('express')
 const bodyParser = require('body-parser')
-//const router = require('./components/message/network') 
+const message= require('./components/message/network') 
 const router = require('./network/routes')
 const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 //app.use(router)
-router(app)
 app.use('/app', express.static('public'))
+router(app)
 
 app.listen(3000)
 console.log('App corriendo en puerto 3000')
